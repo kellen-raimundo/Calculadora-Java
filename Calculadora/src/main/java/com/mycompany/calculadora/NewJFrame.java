@@ -43,7 +43,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jbMais = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jbMultiplicacao = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
+        jbSubtracao = new javax.swing.JButton();
         jbIgual = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -153,10 +153,10 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton15.setText("-");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        jbSubtracao.setText("-");
+        jbSubtracao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                jbSubtracaoActionPerformed(evt);
             }
         });
 
@@ -201,7 +201,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbMultiplicacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbSubtracao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbApagar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
@@ -238,7 +238,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addComponent(jButton13)
                     .addComponent(jbIgual)
                     .addComponent(jbMais)
-                    .addComponent(jButton15))
+                    .addComponent(jbSubtracao))
                 .addContainerGap())
         );
 
@@ -270,9 +270,11 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    private void jbSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSubtracaoActionPerformed
+        num1 = Double.parseDouble(jTextField1.getText());
+        operador = "-";
+        jTextField1.setText("");
+    }//GEN-LAST:event_jbSubtracaoActionPerformed
 
     private void jbMaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMaisActionPerformed
         num1 = Double.parseDouble(jTextField1.getText());
@@ -381,7 +383,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
@@ -394,5 +395,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jbIgual;
     private javax.swing.JButton jbMais;
     private javax.swing.JButton jbMultiplicacao;
+    private javax.swing.JButton jbSubtracao;
     // End of variables declaration//GEN-END:variables
 }

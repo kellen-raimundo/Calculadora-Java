@@ -60,7 +60,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jButton8" max="32767" attributes="0"/>
                   <Component id="jbMultiplicacao" max="32767" attributes="0"/>
-                  <Component id="jButton15" max="32767" attributes="0"/>
+                  <Component id="jbSubtracao" max="32767" attributes="0"/>
                   <Component id="jbApagar" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
@@ -106,7 +106,7 @@
                   <Component id="jButton13" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jbIgual" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jbMais" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton15" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbSubtracao" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -234,12 +234,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbMultiplicacaoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton15">
+    <Component class="javax.swing.JButton" name="jbSubtracao">
       <Properties>
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton15ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbSubtracaoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbIgual">
