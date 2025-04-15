@@ -40,7 +40,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
+        jbMais = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jbMultiplicacao = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
@@ -132,10 +132,10 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton12.setText("+");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        jbMais.setText("+");
+        jbMais.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                jbMaisActionPerformed(evt);
             }
         });
 
@@ -190,7 +190,7 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                            .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jbMais, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -237,7 +237,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton13)
                     .addComponent(jbIgual)
-                    .addComponent(jButton12)
+                    .addComponent(jbMais)
                     .addComponent(jButton15))
                 .addContainerGap())
         );
@@ -274,9 +274,11 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton15ActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+    private void jbMaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMaisActionPerformed
+        num1 = Double.parseDouble(jTextField1.getText());
+        operador = "+";
+        jTextField1.setText("");
+    }//GEN-LAST:event_jbMaisActionPerformed
 
     private void jbIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbIgualActionPerformed
         num2 = Double.parseDouble(jTextField1.getText());
@@ -378,7 +380,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
@@ -391,6 +392,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton jbApagar;
     private javax.swing.JButton jbIgual;
+    private javax.swing.JButton jbMais;
     private javax.swing.JButton jbMultiplicacao;
     // End of variables declaration//GEN-END:variables
 }
