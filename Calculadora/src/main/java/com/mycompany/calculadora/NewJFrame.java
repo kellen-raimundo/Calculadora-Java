@@ -44,7 +44,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton13 = new javax.swing.JButton();
         jbMultiplicacao = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
+        jbIgual = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -160,10 +160,10 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton16.setText("=");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        jbIgual.setText("=");
+        jbIgual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                jbIgualActionPerformed(evt);
             }
         });
 
@@ -185,7 +185,7 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                            .addComponent(jbIgual, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
                             .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -236,7 +236,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton13)
-                    .addComponent(jButton16)
+                    .addComponent(jbIgual)
                     .addComponent(jButton12)
                     .addComponent(jButton15))
                 .addContainerGap())
@@ -273,9 +273,28 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    private void jbIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbIgualActionPerformed
+        num2 = Double.parseDouble(jTextField1.getText());
+        
+        switch(operador){
+            case "*":
+                jTextField1.setText(String.valueOf(operacoes.multiplicacao(num1, num2)));
+                break;
+            case "+":
+                jTextField1.setText(String.valueOf(operacoes.soma(num1, num2)));
+                break;
+            case "-":
+                jTextField1.setText(String.valueOf(operacoes.subtracao(num1, num2)));
+                break;
+            case "/":
+                try{
+                    jTextField1.setText(String.valueOf(operacoes.divisao(num1, num2)));
+                }catch(ArithmeticException e){
+                    jTextField1.setText("ERRO");
+                }
+                break;
+        }
+    }//GEN-LAST:event_jbIgualActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
     jTextField1.setText(jTextField1.getText() + "8");
@@ -357,7 +376,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -367,6 +385,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton jbIgual;
     private javax.swing.JButton jbMultiplicacao;
     // End of variables declaration//GEN-END:variables
 }
