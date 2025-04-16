@@ -147,6 +147,11 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         jButton14.setText("X");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
         jButton15.setText("=");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -316,6 +321,12 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
     jTextField1.setText(jTextField1.getText() + "0");
     }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        num1 = Double.parseDouble(jTextField1.getText());
+        operador = "*";
+        jTextField1.setText("");
+    }//GEN-LAST:event_jButton14ActionPerformed
 
     /**
      * @param args the command line arguments
