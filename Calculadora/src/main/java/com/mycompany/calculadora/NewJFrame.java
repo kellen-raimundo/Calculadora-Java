@@ -287,7 +287,9 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
+        num1 = Double.parseDouble(jTextField1.getText());
+        operador = "-";
+        jTextField1.setText("");
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
