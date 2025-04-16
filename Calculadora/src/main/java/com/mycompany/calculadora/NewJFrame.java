@@ -277,7 +277,26 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        num2 = Double.parseDouble(jTextField1.getText());
         
+        switch(operador){
+            case "+":
+                jTextField1.setText(String.valueOf(operacoes.soma(num1, num2)));
+                break;
+            case "-":
+                jTextField1.setText(String.valueOf(operacoes.subtracao(num1, num2)));
+                break;
+            case "*":
+                jTextField1.setText(String.valueOf(operacoes.multiplicacao(num1, num2)));
+                break;
+            case "/":
+                try{
+                    jTextField1.setText(String.valueOf(operacoes.divisao(num1, num2)));
+                }catch(ArithmeticException e){
+                    jTextField1.setText("Erro");
+                }
+                break;
+        }
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
