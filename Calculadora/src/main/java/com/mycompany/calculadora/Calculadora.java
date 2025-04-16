@@ -1,0 +1,16 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.calculadora;
+
+
+
+public class Calculadora {
+
+    public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(() -> {
+            new NewJFrame().setVisible(true);
+        });
+    }
+}
